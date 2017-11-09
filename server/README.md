@@ -5,8 +5,26 @@
 - 解析相关库
     - [hal 相关库汇总](https://github.com/mikekelly/hal_specification/wiki/Libraries)
     - [angular-hal](https://github.com/LuvDaSun/angular-hal)
-    
-# 
+### cascade属性表示
+- 不定义,则对关系表不会产生任何影响
+- CascadeType.PERSIST （级联新建）
+- CascadeType.REMOVE （级联删除）
+- CascadeType.MERGE （级联更新）中选择一个或多个。
+- 还有一个选择是使用CascadeType.ALL ，表示选择全部四项
+
+
+### 相关技术
+- [restangular](https://github.com/mgonto/restangular)
+- [spring boot 1.4默认使用 hibernate validator](http://www.cnblogs.com/softidea/p/6043879.html)
+- jpa
+    - [jpa概述](http://www.cnblogs.com/holbrook/archive/2012/12/30/2839842.html)
+    - [Hibernate之jpa实体映射的三种继承关系](http://www.cnblogs.com/shangxiaofei/p/5704321.html)
+    - [JPA One-To-One Shared Primary Key Relationship Mapping Example with Spring Boot](https://hellokoding.com/jpa-one-to-one-shared-primary-key-relationship-mapping-example-with-spring-boot-hsql/)
+    - [JpaTreeDao](http://members.chello.at/fritz.ritzberger/downloads/jpatreedao/JpaTreeDao.html)
+    - [JPA-NestedSet](https://github.com/romanb/JPA-NestedSet)
+    - [Baobaba library applying the nested set model](http://baobab.sideralis.org/)
+    - [Spring BootとSpring Data JPAで検索アプリケーションを開発してCircleCIでビルドする](http://qiita.com/rubytomato@github/items/7551b02abc34054301c0)
+
 ### 命名约定
 - 数据表名：单数，下划线分隔单词（例如 book_club）
 - 模型类名：单数，每个单词的首字母大写（例如 BookClub）

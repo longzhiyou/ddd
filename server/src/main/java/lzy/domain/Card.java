@@ -13,7 +13,6 @@ import java.util.Date;
  * Time: 11:08
  */
 @Data
-@ToString
 @Entity
 public class Card {
 
@@ -22,7 +21,6 @@ public class Card {
     private Long id;
 
     private String card_num;
-
     private Date createAt;
 
     @OneToOne
