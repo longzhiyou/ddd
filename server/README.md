@@ -1,3 +1,15 @@
+# 目的-集大成
+
+客户端实验不同的业务模块单独的css,服务器端用超媒体以及jpa 解决80%以上的简单业务
+
+- 超媒体
+    - 服务器:spring-boot-starter-data-rest
+    - 客户端: 
+- jpa的关联关系
+    - 1-1
+    - 1-m
+    - m-n
+
 ### HAL
 - 包:spring-data-rest-hal-browser
 - 访问地址: http://127.0.0.1:8006/api/browser/index.html
@@ -5,6 +17,7 @@
 - 解析相关库
     - [hal 相关库汇总](https://github.com/mikekelly/hal_specification/wiki/Libraries)
     - [angular-hal](https://github.com/LuvDaSun/angular-hal)
+    - [angular-hypermedia](https://github.com/jcassee/angular-hypermedia)
 ### cascade属性表示
 - 不定义,则对关系表不会产生任何影响
 - CascadeType.PERSIST （级联新建）
@@ -93,6 +106,13 @@
 
 ### 日志相关
 - [Spring Boot干货系列：（七）默认日志框架配置](http://blog.csdn.net/gebitan505/article/details/70142155?locationNum=1&fps=1)
+
+### ui
+- https://wrapbootstrap.com/
+- http://www.themeon.net/nifty/v2.8/index.html
+- http://coderthemes.com/minton/ 
+- http://webapplayers.com/inspinia_admin-v2.7.1/index.html 
+- https://htmlstream.com/preview/unify-v2.3/
 
 
 ### 参考文章

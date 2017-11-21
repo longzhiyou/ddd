@@ -17,7 +17,7 @@ management:
 spring:
   data:
     rest:
-      basePath: /api/v1
+      basePath: /api
   output:
     ansi:
       enabled: detect
@@ -72,5 +72,14 @@ logging:
                         sql:
                             BasicBinder: TRACE
     #如果只配置 logging.file，会在项目的当前路径下生成一个 xxx.log 日志文件。
-    file: ddd.log
+#    file: ddd.log
 
+cron:
+  cron1: 0 * * * * MON-FRI
+  cron2: 0 */2 * * * *
+
+# JWT
+jwt:
+  tokenHeader: Authorization
+  secret: longzhiyou
+  expiration: 31536000
