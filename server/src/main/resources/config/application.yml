@@ -83,3 +83,4 @@ jwt:
   tokenHeader: Authorization
   secret: longzhiyou
   expiration: 31536000
+  devToken: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsb25nemhpeW91IiwiY3JlYXRlZCI6MTUxMTE0NTM2MTExOCwiZXhwIjoxNTQyNjgxMzYxfQ.muRJMRr3BP2rezqfd29Kqk6I3WzmsuJ3bM3bHEPNFm4hcf8THaNMWhfU7z8hf09zTTHXESCEb31d7HoCS6UnYQ
