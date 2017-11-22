@@ -53,8 +53,10 @@ function config($httpProvider
     RestangularProvider.setBaseUrl('http://localhost:8081/api');
     // You can set some default headers for calling the API
     // RestangularProvider.setDefaultHeaders(
-    //     // { "Accept": 'application/vnd.acme-v1'},
-    //     { "Content-Type": "application/json+hal" }
+    //     { "Access-Control-Allow-Origin": '*'},
+    //     { "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS"},
+    //     { "Accept": "application/json, text/plain, */*"},
+    //     { "Content-Type": "application/json;charset=utf-8"}
     // );
 
 
@@ -64,7 +66,8 @@ function config($httpProvider
 
     // Use Request interceptor
     RestangularProvider.setRequestInterceptor(function(element, operation, route, url) {
-        delete element._links;
+        if (element&&element._links)
+            delete element._links;
         return element;
     });
 
@@ -84,7 +87,7 @@ function config($httpProvider
             console.log(landingUrl);
             window.location.href = landingUrl;
         }
-        ,whiteListedDomains: ['localhost','localhost:8081']
+        ,whiteListedDomains: ['localhost']
     });
     $httpProvider.interceptors.push('jwtInterceptor');
 

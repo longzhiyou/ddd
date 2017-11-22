@@ -11,7 +11,7 @@
   /** @ngInject */
   function indexCtrl($state, Restangular, DTOptionsBuilder,
                      DTColumnDefBuilder,defaultOptionsDom,warningModalService
-                     ,halService
+                     ,halService,promptService
 
   ) {
 
@@ -53,13 +53,14 @@
 
     function loadData(){
 
+        //customGET
         Restangular.all('customers').customGET().then(function(hal) {
-            vm.hal = hal;
-            // var link = hal.selfLink;
             vm.customers = hal._embedded.customers;
 
-        });
+        }, function(error) {
+            promptService.failure(setting.getDataError);
 
+        });
 
     }
 
@@ -76,9 +77,8 @@
     function destroy(item){
 
         warningModalService.open(item).result.then(function(item) {
-            //确定处理
-            console.log('destroy at: ' + item);
-            Restangular.one('/customers',halService.getId(item)).remove().then(function(hal) {
+            //以后直接复制
+            Restangular.oneUrl('hal',halService.getSelfLink(item)).remove().then(function(hal) {
                 vm.loadData();
             });
         });
@@ -87,17 +87,6 @@
 
 
     }
-    //
-    //function add() {
-    //  //vm.customers.push(angular.copy(vm.Customer2Add));
-    //  //vm.Customer2Add = _buildCustomer2Add(vm.Customer2Add.id + 1);
-    //}
-    //function modify(index) {
-    //
-    //}
-    //function remove(index) {
-    //  //vm.customers.splice(index, 1);
-    //}
 
 
     function init(){
