@@ -1,4 +1,4 @@
-package lzy.module.customer.entity;
+package lzy.module.staff.entity;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -21,11 +21,12 @@ import javax.persistence.Id;
 @EqualsAndHashCode(callSuper=true)
 @Data
 @Entity
-public class Customer extends PersonEntity {
+public class Staff extends PersonEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long customerId;
-    private String name;
+    private Long staffId;
+    private String staffNo;
+
 
 }
