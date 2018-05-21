@@ -46,8 +46,8 @@ public class BookRepositoryTest {
         // save a couple of books
         List<Book> books = new ArrayList<>();
         books.add(new Book("Book A", new BookDetail(49)));
-//        books.add(new Book("Book B", new BookDetail(59)));
-//        books.add(new Book("Book C", new BookDetail(69)));
+        books.add(new Book("Book B", new BookDetail(59)));
+        books.add(new Book("Book C", new BookDetail(69)));
         bookRepository.save(books);
 
     }

@@ -1,5 +1,6 @@
 package lzy.module.demo;
 import lombok.Data;
+import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -16,8 +17,9 @@ import java.io.Serializable;
 @Entity
 public class Book implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    @GenericGenerator(name = "idGenerator", strategy = "lzy.common.entity.IdGenerator")
+    @GeneratedValue(generator = "idGenerator")
+    private long id;
     private String name;
 
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "book")

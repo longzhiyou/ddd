@@ -15,6 +15,10 @@ import javax.persistence.MappedSuperclass;
 @Data
 public abstract class PersonEntity extends BaseEntity {
 
+    private String name;
+    private String gender;
+    private String birth;
+
     private String firstName;
     private String lastName;
 
